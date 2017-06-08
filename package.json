@@ -8,7 +8,7 @@
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.js": ["echo $@"]
+    "*.js": ["echo hi there"]
   },
   "keywords": [],
   "author": "",
