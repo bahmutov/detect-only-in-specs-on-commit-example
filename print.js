@@ -1,3 +1,3 @@
-console.log(process.argv)
+console.error(process.argv)
 
 
