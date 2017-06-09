@@ -1,5 +1,7 @@
 # detect-only-in-tests
 
+> Detects it.only in specs on commit (example)
+
 How to stop committing test files with `it.only` in BDD tests?
 
 1. Use [eslint][eslint] with whatever rules you want
