@@ -4,16 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "eslint src/*.js",
+    "ban-only": "eslint --rule 'no-only-tests/no-only-tests: 2' src/*.js",
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.js": "node print.js"
+    "*.js": "eslint --rule 'no-only-tests/no-only-tests: 2'"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-plugin-no-only-tests": "^1.1.0",
     "husky": "^0.13.4",
     "lint-staged": "^3.6.0"
   }
