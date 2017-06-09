@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "eslint src/*.js",
-    "ban-only": "eslint --rule 'no-only-tests/no-only-tests: 2' src/*.js",
+    "precommit-lint": "eslint --fix --rule 'no-only-tests/no-only-tests: 2'",
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.js": "eslint --rule 'no-only-tests/no-only-tests: 2'"
+    "src/*.js": ["precommit-lint", "git add"],
+    "verbose": false
   },
   "keywords": [],
   "author": "",
